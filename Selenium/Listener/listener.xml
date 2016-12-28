@@ -1,0 +1,6 @@
+<suite name="sanity">
+<listeners>
+<listener class-name="com.iwaf.framework.testng.TestSoftAssert"/>
+<listener class-name="com.iwaf.framework.testng.TestNGTestListener"/>
+</listeners> 
+</suite>

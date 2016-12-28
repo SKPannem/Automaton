@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [sanity]" parallel="none">
+  <listeners>
+    <listener class-name="com.iwaf.framework.testng.TestSoftAssert"/>
+    <listener class-name="com.iwaf.framework.testng.TestNGTestListener"/>
+  </listeners>
+  <test name="Default test(failed)" parallel="none">
+    <classes>
+      <class name="com.tests.Esysco_IFG">
+        <methods>
+          <include name="BR001_04"/>
+          <include name="setUp"/>
+        </methods>
+      </class> <!-- com.tests.Esysco_IFG -->
+    </classes>
+  </test> <!-- Default test(failed) -->
+</suite> <!-- Failed suite [sanity] -->

@@ -1,0 +1,108 @@
+<project basedir="." name="Test" default="run.test">
+	
+	<property name="sitebase" value="./Test" /> 
+	<property name="build" location="${sitebase}/build" />
+	<property name="test-classes" value="${build}/test-classes" />
+	<property name="test-output" value="${build}/test-output" />
+	<property name="realtimereportbkup" location="./realtimereportbkup" />
+	<!--<property name="test-report" value="${build}/test-report" />
+	<property name="test-archive" value="${build}/archive" />
+	<property name="test-screenshots" value="${build}/test-output/screenshots" /> 
+	<property name="meta-inf" value="runner/src/META-INF" /> -->
+	<property name="lib" location="lib" />
+	<!--<property name="runner.src" location="runner/src" />-->
+	<!--<property name="functional.src" location="Functional/src" /> -->
+	<property name="src" location="${sitebase}/src" />
+	<path id="build.classpath">
+		<fileset dir="${lib}">
+			<include name="*.jar" />
+			<!--<include name="selenium-grid-tools-1.0.5.jar" />
+			<include name="selenium-server-standalone-2.40.0.jar" />
+			<include name="testng-6.3.1.jar" />
+			<include name="classes12.jar" />
+			<include name="toplink-essentials-agent.jar" />
+			<include name="toplink-essentials.jar" />
+			<include name="mysql-connector-java-5.1.18-bin.jar" />
+			<include name="iWAF-3.0.jar" />
+			<include name="guice-3.0.jar" />
+			<include name="reportng-1.1.4.jar" />
+			<include name="reportng-1.1.4.jar" />
+			<include name="velocity-dep-1.4.jar" />-->
+			
+		</fileset>
+	</path>
+
+	<target name="build.config" >	
+			<copy file="data-pool/test.properties.temp" tofile="test.properties" overwrite="true">
+				<filterset begintoken="@" endtoken="@">
+					<filter token="buildName" value="${buildName}" />
+					<filter token="buildNumber" value="${buildNumber}" />
+					<filter token="selenium.timeout" value="${selenium.timeout}"/>
+					<filter token="selenium.host" value="${selenium.host}"/>
+					<filter token="selenium.port" value="${selenium.port}"/>
+					<filter token="test.browser" value="${test.browser}"/>
+					<filter token="test.browser.version" value="${test.browser.version}"/>
+					<filter token="localExecution" value="${localExecution}"/>
+					<filter token="test.url" value="${test.url}"/>
+					<filter token="useProxy" value="${useProxy}"/>
+					<filter token="proxy.url" value="${proxy.url}"/>
+					<filter token="groups" value="${groups}" />
+					<filter token="packages" value="${packages}" />
+					<filter token="threadCount" value="${threadCount}" />
+					<filter token="dataProviderThreadCount" value="${dataProviderThreadCount}" />
+					<filter token="runParallel" value="${runParallel}" />					
+					<filter token="retryCount" value="${retryCount}" />
+					<filter token="reportType" value="${reportType}"/>
+					<filter token="selenium.capture.path" value="${selenium.capture.path}"/>
+					<filter token="useVideoCapture" value="${useVideoCapture}"/>
+					<filter token="showVideosOnPass" value="${showVideosOnPass}"/>	
+					<filter token="realTimeReport" value="${realTimeReport}"/>	
+					<filter token="qcIntegrationFlag" value="${qcIntegrationFlag}"/>
+					<filter token="testdata.path" value="${testdata.path}"/>
+					<filter token="dbUrl" value="${dbUrl}" />
+					<filter token="dbDriverClass" value="${dbDriverClass}" />
+					<filter token="dbUser" value="${dbUser}" />
+					<filter token="dbPass" value="${dbPass}" />
+				</filterset>
+			</copy>
+	</target>
+	
+	<target name="init">
+		<mkdir dir="${build}" />
+		<mkdir dir="${test-classes}" />
+		<mkdir dir="${test-output}" />
+		<mkdir dir="${realtimereportbkup}" />
+	</target>
+
+	<target name="clean">
+		<delete dir="${build}" failonerror="false" />
+		<delete dir="${realtimereportbkup}" failonerror="false" />
+	</target>
+
+	<target name="compile" depends="clean,init">
+		<javac destdir="${test-classes}" classpathref="build.classpath"
+			debug="false" target="1.7" encoding="iso-8859-1">
+			<!--<src path="${base_framework.src}" />-->
+			<!--<src path="${runner.src}"/>-->
+			<src path="${src}" />
+			<!--<src path="${functional.src}" />-->
+		</javac>
+		<!--<copy todir="${test-classes}/META-INF">
+				        <fileset dir="${meta-inf}" />
+		</copy>-->
+	</target>
+
+	<taskdef name="testng" classname="org.testng.TestNGAntTask">
+		<classpath>
+			<pathelement location="${lib}/testng-6.8.13.jar" />
+		</classpath>
+	</taskdef>
+	
+	<target name="run.test" depends="compile,build.config">     
+        <java fork="true" classname="com.testng.TestNGInitiator" classpathref="build.classpath" classpath="${test-classes}">
+                <jvmarg value="-javaagent:${lib}\aspectjweaver.jar"/>        
+		      	<sysproperty key="java.util.logging.config.file" value="logging.properties"/>
+		    </java>	      
+	</target>
+
+</project>

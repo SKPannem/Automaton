@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+  <title>TestNG reports</title>
+
+    <link type="text/css" href="testng-reports.css" rel="stylesheet" />  
+    <script type="text/javascript" src="jquery-1.7.1.min.js"></script>
+    <script type="text/javascript" src="testng-reports.js"></script>
+    <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+    <script type='text/javascript'>
+      google.load('visualization', '1', {packages:['table']});
+      google.setOnLoadCallback(drawTable);
+      var suiteTableInitFunctions = new Array();
+      var suiteTableData = new Array();
+    </script>
+    <!--
+      <script type="text/javascript" src="jquery-ui/js/jquery-ui-1.8.16.custom.min.js"></script>
+     -->
+  </head>
+
+  <body>
+    <div class="top-banner-root">
+      <span class="top-banner-title-font">Test results</span>
+      <br/>
+      <span class="top-banner-font-1">1 suite, 1 failed test</span>
+    </div> <!-- top-banner-root -->
+    <div class="navigator-root">
+      <div class="navigator-suite-header">
+        <span>All suites</span>
+        <a href="#" class="collapse-all-link" title="Collapse/expand all the suites">
+          <img class="collapse-all-icon" src="collapseall.gif">
+          </img> <!-- collapse-all-icon -->
+        </a> <!-- collapse-all-link -->
+      </div> <!-- navigator-suite-header -->
+      <div class="suite">
+        <div class="rounded-window">
+          <div class="suite-header light-rounded-window-top">
+            <a href="#" class="navigator-link" panel-name="suite-sanity">
+              <span class="suite-name border-failed">sanity</span>
+            </a> <!-- navigator-link -->
+          </div> <!-- suite-header light-rounded-window-top -->
+          <div class="navigator-suite-content">
+            <div class="suite-section-title">
+              <span>Info</span>
+            </div> <!-- suite-section-title -->
+            <div class="suite-section-content">
+              <ul>
+                <li>
+                  <a href="#" class="navigator-link " panel-name="test-xml-sanity">
+                    <span>C:\Users\sampada_dalai\AppData\Local\Temp\testng-eclipse--2113936341\testng-customsuite.xml</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" class="navigator-link " panel-name="testlist-sanity">
+                    <span class="test-stats">1 test</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" class="navigator-link " panel-name="group-sanity">
+                    <span>1 group</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" class="navigator-link " panel-name="times-sanity">
+                    <span>Times</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" class="navigator-link " panel-name="reporter-sanity">
+                    <span>Reporter output</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" class="navigator-link " panel-name="ignored-methods-sanity">
+                    <span>Ignored methods</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" class="navigator-link " panel-name="chronological-sanity">
+                    <span>Chronological view</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+              </ul>
+            </div> <!-- suite-section-content -->
+            <div class="result-section">
+              <div class="suite-section-title">
+                <span>Results</span>
+              </div> <!-- suite-section-title -->
+              <div class="suite-section-content">
+                <ul>
+                  <li>
+                    <span class="method-stats">1 method, 1 failed,   </span>
+                  </li>
+                  <li>
+                    <span class="method-list-title failed">Failed methods</span>
+                    <span class="show-or-hide-methods failed">
+                      <a href="#" panel-name="suite-sanity" class="hide-methods failed suite-sanity"> (hide)</a> <!-- hide-methods failed suite-sanity -->
+                      <a href="#" panel-name="suite-sanity" class="show-methods failed suite-sanity"> (show)</a> <!-- show-methods failed suite-sanity -->
+                    </span>
+                    <div class="method-list-content failed suite-sanity">
+                      <span>
+                        <img width="3%" src="failed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-sanity" title="com.tests.Esysco_IFG" hash-for-method="BR001_04">BR001_04</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                    </div> <!-- method-list-content failed suite-sanity -->
+                  </li>
+                </ul>
+              </div> <!-- suite-section-content -->
+            </div> <!-- result-section -->
+          </div> <!-- navigator-suite-content -->
+        </div> <!-- rounded-window -->
+      </div> <!-- suite -->
+    </div> <!-- navigator-root -->
+    <div class="wrapper">
+      <div class="main-panel-root">
+        <div panel-name="suite-sanity" class="panel sanity">
+          <div class="suite-sanity-class-failed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="failed.png"/>
+              <span class="class-name">com.tests.Esysco_IFG</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="BR001_04">
+                  </a> <!-- BR001_04 -->
+                  <span class="method-name">BR001_04</span>
+                  <div class="stack-trace">zRfghY.e: Element [txt_UserName] is not present.
+	at zRfghY.d.a(SynchronizationAction.java:90)
+	at zRfghY.d.b(SynchronizationAction.java:63)
+	at zRfghY.c.waitForTargetPresent(CommandImpl.java:271)
+	at com.components.pages.LoginPage.loginToApplication(LoginPage.java:59)
+	at com.tests.Esysco_IFG.BR001_04(Esysco_IFG.java:83)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:84)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:714)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
+	at org.testng.TestRunner.privateRun(TestRunner.java:767)
+	at org.testng.TestRunner.run(TestRunner.java:617)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:334)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:240)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1224)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1149)
+	at org.testng.TestNG.run(TestNG.java:1057)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:132)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:236)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:81)
+
+</div> <!-- stack-trace -->
+                  <em>
+(BR001_04 : Validation of Sysco Market Express home page for IFG user)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-sanity-class-failed -->
+        </div> <!-- panel sanity -->
+        <div panel-name="test-xml-sanity" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">C:\Users\sampada_dalai\AppData\Local\Temp\testng-eclipse--2113936341\testng-customsuite.xml</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+            <pre>
+&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+&lt;!DOCTYPE suite SYSTEM &quot;http://testng.org/testng-1.0.dtd&quot;&gt;
+&lt;suite name=&quot;sanity&quot; parallel=&quot;none&quot;&gt;
+  &lt;listeners&gt;
+    &lt;listener class-name=&quot;com.iwaf.framework.testng.TestSoftAssert&quot;/&gt;
+    &lt;listener class-name=&quot;com.iwaf.framework.testng.TestNGTestListener&quot;/&gt;
+  &lt;/listeners&gt;
+  &lt;test verbose=&quot;2&quot; name=&quot;Default test&quot;&gt;
+    &lt;classes&gt;
+      &lt;class name=&quot;com.tests.Esysco_IFG&quot;&gt;
+        &lt;methods&gt;
+          &lt;include name=&quot;BR001_04&quot;/&gt;
+        &lt;/methods&gt;
+      &lt;/class&gt; &lt;!-- com.tests.Esysco_IFG --&gt;
+    &lt;/classes&gt;
+  &lt;/test&gt; &lt;!-- Default test --&gt;
+&lt;/suite&gt; &lt;!-- sanity --&gt;
+            </pre>
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="testlist-sanity" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Tests for sanity</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+            <ul>
+              <li>
+                <span class="test-name">Default test (1 class)</span>
+              </li>
+            </ul>
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="group-sanity" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Groups for sanity</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+            <div class="test-group">
+              <span class="test-group-name">IFG_Specific</span>
+              <br/>
+              <div class="method-in-group">
+                <span class="method-in-group-name">BR001_04</span>
+                <br/>
+              </div> <!-- method-in-group -->
+            </div> <!-- test-group -->
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="times-sanity" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Times for sanity</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+            <div class="times-div">
+              <script type="text/javascript">
+suiteTableInitFunctions.push('tableData_sanity');
+function tableData_sanity() {
+var data = new google.visualization.DataTable();
+data.addColumn('number', 'Number');
+data.addColumn('string', 'Method');
+data.addColumn('string', 'Class');
+data.addColumn('number', 'Time (ms)');
+data.addRows(1);
+data.setCell(0, 0, 0)
+data.setCell(0, 1, 'BR001_04')
+data.setCell(0, 2, 'com.tests.Esysco_IFG')
+data.setCell(0, 3, 69429);
+window.suiteTableData['sanity']= { tableData: data, tableDiv: 'times-div-sanity'}
+return data;
+}
+              </script>
+              <span class="suite-total-time">Total running time: 1 minutes</span>
+              <div id="times-div-sanity">
+              </div> <!-- times-div-sanity -->
+            </div> <!-- times-div -->
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="reporter-sanity" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Reporter output for sanity</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+            <div class="reporter-method-div">
+              <span class="reporter-method-name">BR001_04</span>
+              <div class="reporter-method-output-div">
+                <span class="reporter-method-output">[15:39:50] : <b><FONT SIZE="2">Opened eSysco Login Page </FONT></b><br></span>
+                <span class="reporter-method-output"><b><font color='RED'>ERROR	:- Element [txt_UserName] is not present.</font></b></span>
+                <span class="reporter-method-output"><br><a href=screenshots/BR001_04_Screenshot.png>Screenshot</a> 
+</span>
+                <span class="reporter-method-output"><br><a href=..\com.tests.Esysco_IFG.BR001_04.ogg >Video</a></span>
+              </div> <!-- reporter-method-output-div -->
+            </div> <!-- reporter-method-div -->
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="ignored-methods-sanity" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">21 ignored methods</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+            <div class="ignored-class-div">
+              <span class="ignored-class-name">com.tests.Esysco_IFG</span>
+              <div class="ignored-methods-div">
+                <span class="ignored-method-name">BR011_01</span>
+                <br/>
+                <span class="ignored-method-name">OrderCreation_AIR</span>
+                <br/>
+                <span class="ignored-method-name">BR030_05</span>
+                <br/>
+                <span class="ignored-method-name">BR017_01</span>
+                <br/>
+                <span class="ignored-method-name">CreateIFGNormalUser</span>
+                <br/>
+                <span class="ignored-method-name">BR011_02</span>
+                <br/>
+                <span class="ignored-method-name">BR019_01</span>
+                <br/>
+                <span class="ignored-method-name">BR011_03</span>
+                <br/>
+                <span class="ignored-method-name">BR032_01</span>
+                <br/>
+                <span class="ignored-method-name">BR005_02</span>
+                <br/>
+                <span class="ignored-method-name">BR021_01</span>
+                <br/>
+                <span class="ignored-method-name">BR010_01_n</span>
+                <br/>
+                <span class="ignored-method-name">OrderCreation_ocean_FCL</span>
+                <br/>
+                <span class="ignored-method-name">BR005_01</span>
+                <br/>
+                <span class="ignored-method-name">BR027_01</span>
+                <br/>
+                <span class="ignored-method-name">OrderCreation_TruckFTL</span>
+                <br/>
+                <span class="ignored-method-name">OrderCreation_TrucK_LTL</span>
+                <br/>
+                <span class="ignored-method-name">CreateIFGMultiBuyerUser</span>
+                <br/>
+                <span class="ignored-method-name">OrderCreation_OceanLCL</span>
+                <br/>
+                <span class="ignored-method-name">BR030_04</span>
+                <br/>
+                <span class="ignored-method-name">BR003_02</span>
+                <br/>
+              </div> <!-- ignored-methods-div -->
+            </div> <!-- ignored-class-div -->
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="chronological-sanity" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Methods in chronological order</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.tests.Esysco_IFG</div> <!-- chronological-class-name -->
+              <div class="configuration-method before">
+                <span class="method-name">setUp(public void com.tests.Esysco_IFG.BR001_04())</span>
+                <span class="method-start">0 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">BR001_04</span>
+                <span class="method-start">53387 ms</span>
+              </div> <!-- test-method -->
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+      </div> <!-- main-panel-root -->
+    </div> <!-- wrapper -->
+  </body>
+</html>
